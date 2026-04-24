@@ -1,23 +1,24 @@
+"use client";
+import { motion } from "framer-motion";
 import AnimatedSection from "../../components/AnimatedSection";
+import { useTranslation } from "../../context/LanguageContext";
 
 export default function About() {
+  const { t } = useTranslation();
   return (
-    <div className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <div className="py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <AnimatedSection>
-          <h1 className="text-5xl font-extrabold mb-10 text-gray-900 dark:text-white">About Us</h1>
-          <div className="mb-12 rounded-[2rem] overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800">
+          <h1 className="text-5xl font-extrabold mb-10 text-white">About Us</h1>
+          <motion.div className="mb-12 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10" whileHover={{ scale: 1.01 }}>
             <img src="/images/about.jpg" alt="About peasants AI" className="w-full object-cover aspect-[21/9]" />
-          </div>
-          <p className="text-2xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed font-light">
-            AI for everyone, on every device.
+          </motion.div>
+          <p className="text-2xl text-gray-400 mb-8 leading-relaxed font-light">
+            Open AI for the People
           </p>
-          <div className="prose prose-lg dark:prose-invert text-gray-600 dark:text-gray-400 space-y-6">
-            <p className="text-lg">
-              peasants AI fights for AI accessibility. We fine-tune small models on commodity GPUs, quantize them for Raspberry Pis, and release everything under Apache 2.0 so anyone can build, audit, and modify.
-            </p>
-            <p className="text-lg">
-              Our grassroots labs meet in community centers, universities, and online forums to share datasets, evaluate fairness, and prove that world-class AI does not require a hyperscale budget.
+          <div className="space-y-6">
+            <p className="text-lg text-gray-400 leading-relaxed">
+              peasants AI fine-tunes small models on commodity GPUs, quantizes them for Raspberry Pis, and releases everything under Apache 2.0. Our grassroots labs meet in community centers and online forums to share datasets and evaluate fairness.
             </p>
           </div>
         </AnimatedSection>
