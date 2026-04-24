@@ -8,7 +8,7 @@ import { ThemeProvider } from "../context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "peasants AI",
-  description: "Architectural integrity and structural drift prevention.",
+  description: "Accessible, open-source AI models for edge devices and grassroots communities.",
 };
 
 export default function RootLayout({
@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="transition-colors duration-300">
       <head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script dangerouslySetInnerHTML={{__html: `
           tailwind.config = {
@@ -26,8 +27,8 @@ export default function RootLayout({
             theme: {
               extend: {
                 colors: {
-                  primary: '#65a30d',
-                  secondary: '#1a2e05',
+                  primary: '#84CC16',
+                  secondary: '#dc2626',
                 }
               }
             }
